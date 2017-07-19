@@ -7,6 +7,6 @@ RUN  $JAVA_HOME/bin/keytool -genkey -alias tomcat -keyalg RSA -keypass changeit 
 COPY server.xml /usr/local/tomcat/conf/server.xml
 COPY web.xml /usr/local/tomcat/conf/web.xml
 
-EXPOSE 8080 8443
+EXPOSE 8080 443
 
 CMD ["catalina.sh", "run"]
